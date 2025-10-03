@@ -44,7 +44,22 @@ function App() {
   };
 
   return (
+    
     <div className="app-center-container">
+      <div className="nda-list-container">
+      <h3>Known NDA Documents</h3>
+      <ul className="nda-list">
+        <li>AI Startups Ltd.</li>
+        <li>Innovatech Inc.</li>
+        <li>DataWorks GmbH</li>
+        <li>NovaCorp</li>
+        <li>Jane Williams</li>
+        <li>Nino Gelashvili</li>
+        <li>Oliver Brown</li>
+        <li>Daniel Kaplan</li>
+      </ul>
+    </div>
+
       <div className="search-bar-wrapper">
         <input
           type="text"

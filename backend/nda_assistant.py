@@ -44,12 +44,14 @@ def extract_text_from_pdfs():
 def ask_openai(question, context_text):
     prompt = (
     "You are an NDA document assistant.\n"
-    "Below are several NDA agreements. You must ONLY use this provided text to answer questions.\n"
-    "If the answer cannot be found in the text, respond with exactly: 'NOT FOUND'.\n\n"
+    "I will provide a text extracted from a bunch of NDA documents. You must ONLY use this provided text to answer questions.\n"
+    "The assistant's job is to help users figure out if their company has an NDA with specific companies or persons.\n"
+    "If the match is found, return names of signatories or companies exactly as they appear in the text, and NDA start/stop dates if available.\n"
+    "If the match cannot be found, respond with exactly: 'No NDA found'.\n\n"
     "Rules:\n"
     "1. Do NOT use outside knowledge.\n"
     "2. Do NOT guess or make assumptions.\n"
-    "3. Only return the clear answer, nothing extra, no explanations.\n"
+    "3. Return answer without any extra explanations.\n"
     "4. If there are multiple possible answers, separate them with commas.\n\n"
     f"Context:\n{context_text}\n\n"
     f"Question: {question}\n"
