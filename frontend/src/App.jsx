@@ -64,7 +64,7 @@ function App() {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search NDA documents..."
+          placeholder="Example: Do we have an NDA with ..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
